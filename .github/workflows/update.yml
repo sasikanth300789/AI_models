@@ -1,0 +1,16 @@
+name: update
+
+on:
+  schedule:
+    - cron: '* * * * *' 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python '3.9'
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.9'
+    - name: execute the code
+      run: python update_number.py
