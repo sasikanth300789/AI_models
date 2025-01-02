@@ -1,4 +1,4 @@
-name: daily_runs
+name: update_run
 
 on:
   schedule:
