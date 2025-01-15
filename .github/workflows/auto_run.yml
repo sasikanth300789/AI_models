@@ -1,0 +1,22 @@
+name: auto run
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Run commit script
+        run: python update_number.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
