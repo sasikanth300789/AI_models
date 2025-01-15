@@ -37,6 +37,8 @@ def main():
 
 def commit_changes():
     # Add all changes
+    os.system("git config user.name sasikanth300789")
+    os.system("git config user.email sasikanth.nagalla2683@gmail.com")
     os.system("git add .")
 
     # Commit with a message
