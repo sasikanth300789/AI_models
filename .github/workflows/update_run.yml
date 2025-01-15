@@ -20,7 +20,7 @@ jobs:
           git config --local user.email sasikanth.nagalla2683@gmail.com
           git add --all
           git commit -m "updated"
-          git push origin main
+          git push
       env:
         REPO_KEY: ${{ secrets.GITHUB_TOKEN }}
         username: github-actions
