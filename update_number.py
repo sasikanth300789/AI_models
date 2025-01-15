@@ -29,7 +29,7 @@ def main():
         current_number = read_number()
         new_number = current_number + 1
         write_number(new_number)
-        git_commit()
+        #git_commit()
         
     except Exception as e:
         print(f"Error: {str(e)}")
@@ -48,5 +48,5 @@ def commit_changes():
 
 
 if __name__ == "__main__":
-    #main()
+    main()
     commit_changes()
