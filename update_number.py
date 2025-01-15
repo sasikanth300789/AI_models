@@ -48,5 +48,5 @@ def commit_changes():
 
 
 if __name__ == "__main__":
-    main()
+    #main()
     commit_changes()
