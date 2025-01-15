@@ -40,7 +40,7 @@ def commit_changes():
     os.system("git add .")
 
     # Commit with a message
-    commit_message = f"Automated commit on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    commit_message = f"commit on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
     os.system(f'git commit -m "{commit_message}"')
 
     # Push changes
