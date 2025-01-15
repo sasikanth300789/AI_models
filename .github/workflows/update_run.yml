@@ -14,8 +14,5 @@ jobs:
         python-version: '3.9'
     - name: execute the code
       run: python update_number.py
-    - name: commit files
-      run: |
-          git config --local user.name "sasikanth300789"
-          git config --local user.email sasikanth.nagalla2683@gmail.com
-          git commit -m "updated"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
