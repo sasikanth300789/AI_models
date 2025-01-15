@@ -2,17 +2,20 @@ name: update_run
 
 on:
   schedule:
-    - cron: '0 6 * * *' 
+    - cron: '* * * * *' 
 jobs:
-  build:
+  cron:
     runs-on: ubuntu-latest
     steps:
-    
     - uses: actions/checkout@v4
     - name: Set up Python '3.9'
       uses: actions/setup-python@v3
       with:
         python-version: '3.9'
-        
     - name: execute the code
       run: python update_number.py
+    - name: commit files
+      run: |
+          git config --local user.name "sasikanth300789"
+          git config --local user.email sasikanth.nagalla2683@gmail.com
+          git commit -m "updated"

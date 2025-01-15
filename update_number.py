@@ -35,5 +35,18 @@ def main():
         print(f"Error: {str(e)}")
         exit(1)
 
+def commit_changes():
+    # Add all changes
+    os.system("git add .")
+
+    # Commit with a message
+    commit_message = f"Automated commit on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    os.system(f'git commit -m "{commit_message}"')
+
+    # Push changes
+    os.system("git push")
+
+
 if __name__ == "__main__":
-    main() 
+    main()
+    commit_changes()
