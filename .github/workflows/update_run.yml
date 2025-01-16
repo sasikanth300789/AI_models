@@ -18,7 +18,7 @@ jobs:
       run: |
           git config --local user.name "sasikanth300789"
           git config --local user.email sasikanth.nagalla2683@gmail.com
-          git pull
+          git pull origin main
           git add --all
           git commit -am "updated data"
           git push origin main
