@@ -19,7 +19,7 @@ jobs:
           git config --local user.name "sasikanth300789"
           git config --local user.email sasikanth.nagalla2683@gmail.com
           git add --all
-          git commit -am "updated"
+          git commit --date=now --amend -am "updated data"
           git push origin main
       env:
         REPO_KEY: ${{ secrets.GITHUB_TOKEN }}
