@@ -2,7 +2,7 @@ name: update_run
 
 on:
   schedule:
-    - cron: '*/20 */3 * * *' 
+    - cron: '*/20 */5 * * *' 
 jobs:
   cron:
     runs-on: ubuntu-latest
